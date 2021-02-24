@@ -18,9 +18,9 @@ class CoinViewModel(application: Application) : AndroidViewModel(application){
     val priceList = db.coinPriceInfoDao().getPriceList()
 
     fun loadData() {
-        val disposable = apiFactory.apiService.getTopCoinInfo()
+        val disposable = apiFactory.apiService.getTopCoinInfo(limit = 10)
             .map{ it.data?.map { it.coinInfo?.name }?.joinToString(",") }
-            .flatMap { apiFactory.apiService.getFullPriceList(fSym = it) }
+            .flatMap { apiFactory.apiService.getFullPriceList(fSyms = it) }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
