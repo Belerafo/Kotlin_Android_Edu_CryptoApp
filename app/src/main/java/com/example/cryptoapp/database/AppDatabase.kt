@@ -27,7 +27,7 @@ abstract class AppDatabase: RoomDatabase() {
                     db = instance
                     return instance
                 }
-            }//2223
+            }
         }
         abstract fun coinPriceInfoDao():CoinPriceInfiDao
     }
