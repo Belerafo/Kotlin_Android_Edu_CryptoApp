@@ -18,12 +18,13 @@ class CoinViewModel(application: Application) : AndroidViewModel(application){
     val priceList = db.coinPriceInfoDao().getPriceList()
 
     fun loadData() {
-        val disposable = apiFactory.apiService.getTopCoinInfo()
+        val disposable = apiFactory.apiService.getTopCoinInfo(limit = 50)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                // TextViewCenter.setText(it.toString())
-                Log.d("TEST_OF_LOADING_DATA", it.toString())
+                val a = it.data?.map{ it.coinInfo?.name }?.joinToString(",")
+
+                Log.d("TEST_OF_LOADING_DATA", a.toString())
             },{
                 Log.d("TEST_OF_LOADING_DATA", it.message.toString())
             })

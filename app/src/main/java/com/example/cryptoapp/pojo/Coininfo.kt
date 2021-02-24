@@ -8,19 +8,19 @@ import com.google.gson.annotations.SerializedName
 data class Coininfo (
     @SerializedName("Id")
     @Expose
-     val id: String? = null,
+     val id: String?,
 
     @SerializedName("Name")
     @Expose
-     val name: String? = null,
+     val name: String?,
 
     @SerializedName("FullName")
     @Expose
-     val fullName: String? = null,
+     val fullName: String?,
 
     @SerializedName("ImageUrl")
     @Expose
-     val imageUrl: String? = null
+     val imageUrl: String?
 
 
 )
