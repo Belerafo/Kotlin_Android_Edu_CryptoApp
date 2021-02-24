@@ -8,4 +8,4 @@ data class CoinPriceInfoRawData (
     @SerializedName("RAW")
     @Expose
     val CoinPriceInfoJsonObject : JsonObject? = null
-)//55444
+)
