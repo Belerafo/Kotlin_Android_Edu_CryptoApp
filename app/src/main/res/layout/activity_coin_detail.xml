@@ -10,7 +10,7 @@
         android:id="@+id/ivLogoCoin"
         android:layout_width="77dp"
         android:layout_height="77dp"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
         android:id="@+id/tvFromSymbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="35dp"
         tools:text="BTC"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_light"
@@ -32,7 +32,7 @@
         android:id="@+id/tvSlash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="35dp"
         android:text="@string/slash"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_light"
@@ -45,7 +45,7 @@
         android:id="@+id/tvCurrency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="35dp"
         tools:text="USD"
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_bright"
@@ -59,7 +59,7 @@
         android:id="@+id/tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="35dp"
         android:text="@string/price"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -70,7 +70,7 @@
         android:id="@+id/tvMinPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         android:text="@string/min_price"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -80,7 +80,7 @@
         android:id="@+id/tvMaxPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         android:text="@string/max_price"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -90,7 +90,7 @@
         android:id="@+id/tvLastStockMarket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         android:text="@string/last_stock_market"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -100,7 +100,7 @@
         android:id="@+id/tvUpdateTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         android:text="@string/update_time"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -112,7 +112,7 @@
         android:id="@+id/tvMinPriceValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         tools:text="7221.41"
         android:textAlignment="center"
         android:textColor="@android:color/holo_red_dark"
@@ -124,7 +124,7 @@
         android:id="@+id/tvMaxPriceValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         tools:text="7691.41"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -136,7 +136,7 @@
         android:id="@+id/tvLastStockMarketValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         tools:text="Bitfenix"
         android:textAlignment="center"
         android:textSize="16sp"
@@ -147,18 +147,60 @@
         android:id="@+id/tvPriceValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="35dp"
         tools:text="7521.41"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/tvPrice"
         app:layout_constraintTop_toBottomOf="@id/tvSlash" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#63000000"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#63000000"
+        app:layout_constraintTop_toBottomOf="@id/tvMinPrice"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#63000000"
+        app:layout_constraintTop_toBottomOf="@id/tvSlash"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#63000000"
+        app:layout_constraintTop_toBottomOf="@id/tvUpdateTime"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#63000000"
+        app:layout_constraintTop_toBottomOf="@id/tvMaxPrice"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#63000000"
+        app:layout_constraintTop_toBottomOf="@id/tvLastStockMarket"/>
+
     <TextView
         android:id="@+id/tvUpdateTimeValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="25dp"
         tools:text="13:27:52"
         android:textAlignment="center"
         android:textSize="16sp"
