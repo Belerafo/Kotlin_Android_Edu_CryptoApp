@@ -17,36 +17,155 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-    android:id="@+id/tvFromSymbol"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:text="BTC"
-    android:textAlignment="center"
-    android:textColor="@android:color/holo_red_light"
-    android:textSize="24sp"
-    app:layout_constraintEnd_toStartOf="tvSlash"
-    app:layout_constraintTop_toBottomOf="@id/ivLogoCoin" />
+        android:id="@+id/tvFromSymbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="BTC"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvSlash"
+        app:layout_constraintTop_toBottomOf="@id/ivLogoCoin" />
 
     <TextView
-    android:id="@+id/tvSlash"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:text="/"
-    android:textAlignment="center"
-    android:textColor="@android:color/holo_green_light"
-    android:textSize="24sp"
-    app:layout_constraintStart_toEndOf="@id/tvFromSymbol"
-    app:layout_constraintTop_toBottomOf="@id/ivLogoCoin" />
+        android:id="@+id/tvSlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/slash"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogoCoin" />
+
+    <TextView
+        android:id="@+id/tvCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="USD"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/tvSlash"
+        app:layout_constraintTop_toBottomOf="@id/ivLogoCoin" />
+
+
 
     <TextView
         android:id="@+id/tvPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        //android:text="BTC"
-        android:textSize="24sp"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogoCoin" />
+        android:text="@string/price"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFromSymbol" />
+
+    <TextView
+        android:id="@+id/tvMinPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/min_price"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice" />
+    <TextView
+        android:id="@+id/tvMaxPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/max_price"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMinPrice" />
+    <TextView
+        android:id="@+id/tvLastStockMarket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/last_stock_market"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMaxPrice" />
+    <TextView
+        android:id="@+id/tvUpdateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/update_time"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLastStockMarket" />
+
+
+    <TextView
+        android:id="@+id/tvMinPriceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="7221.41"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tvMinPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvPriceValue" />
+
+    <TextView
+        android:id="@+id/tvMaxPriceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="7691.41"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintStart_toEndOf="@id/tvMaxPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvMinPrice" />
+
+    <TextView
+        android:id="@+id/tvLastStockMarketValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="Bitfenix"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tvLastStockMarket"
+        app:layout_constraintTop_toBottomOf="@id/tvMaxPrice" />
+
+    <TextView
+        android:id="@+id/tvPriceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="7521.41"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tvPrice"
+        app:layout_constraintTop_toBottomOf="@id/tvSlash" />
+
+    <TextView
+        android:id="@+id/tvUpdateTimeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="13:27:52"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/tvUpdateTime"
+        app:layout_constraintTop_toBottomOf="@id/tvLastStockMarket" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

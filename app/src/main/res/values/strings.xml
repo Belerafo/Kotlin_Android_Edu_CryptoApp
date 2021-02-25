@@ -2,4 +2,10 @@
     <string name="app_name">cryptoapp</string>
     <string name="symbols_template">%s / %s</string>
     <string name="last_update_template">Время последнего обновления: %s</string>
+    <string name="price">Цена:</string>
+    <string name="min_price">Минимальная цена:</string>
+    <string name="max_price">Максимальная цена:</string>
+    <string name="last_stock_market">Последняя биржа продажи:</string>
+    <string name="update_time">Время обновления:</string>
+    <string name="slash">/</string>
 </resources>
