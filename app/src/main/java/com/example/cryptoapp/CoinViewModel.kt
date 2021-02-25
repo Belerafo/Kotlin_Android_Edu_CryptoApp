@@ -32,7 +32,7 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun loadData() {
-        val disposable = apiFactory.apiService.getTopCoinInfo(limit = 10)
+        val disposable = apiFactory.apiService.getTopCoinInfo(limit = 80)
             .map { it.data?.map { it.coinInfo?.name }?.joinToString(",") }
             .flatMap { apiFactory.apiService.getFullPriceList(fSyms = it) }
             .map { getPriceListFromRawData(it) }

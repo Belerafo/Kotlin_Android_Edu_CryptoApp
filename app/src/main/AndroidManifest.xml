@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Cryptoapp">
-        <activity android:name=".CoinPriceKistActivity">
+        <activity android:name=".CoinPriceListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
