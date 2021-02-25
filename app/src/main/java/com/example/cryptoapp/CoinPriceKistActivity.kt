@@ -9,14 +9,14 @@ import androidx.lifecycle.ViewModelProviders
 
 
 
-class MainActivity : AppCompatActivity() {
+class CoinPriceKistActivity : AppCompatActivity() {
 
     private lateinit  var viewModel: CoinViewModel
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_coin_price_list)
         viewModel = ViewModelProviders.of(this)[CoinViewModel::class.java]
 
 
