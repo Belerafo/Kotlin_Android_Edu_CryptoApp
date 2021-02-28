@@ -9,10 +9,8 @@ import com.example.cryptoapp.database.AppDatabase
 import com.example.cryptoapp.pojo.CoinPriceInfo
 import com.example.cryptoapp.pojo.CoinPriceInfoRawData
 import com.google.gson.Gson
-import io.reactivex.disposables.CompositeDisposable
-
 import io.reactivex.android.schedulers.AndroidSchedulers
-
+import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
 
@@ -32,7 +30,7 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun loadData() {
-        val disposable = apiFactory.apiService.getTopCoinInfo(limit = 80)
+        val disposable = apiFactory.apiService.getTopCoinInfo(limit = 10)
             .map { it.data?.map { it.coinInfo?.name }?.joinToString(",") }
             .flatMap { apiFactory.apiService.getFullPriceList(fSyms = it) }
             .map { getPriceListFromRawData(it) }
@@ -43,7 +41,8 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 db.coinPriceInfoDao().insertPriceList(it)
-                Log.d("TEST_OF_LOADING_DATA", it.toString())
+                db.coinPriceInfoDao().insertPriceList(it)
+                //Log.d("TEST_OF_LOADING_DATA", it.toString())
             }, {
                 Log.d("TEST_OF_LOADING_DATA", it.message.toString())
             })

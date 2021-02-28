@@ -5,6 +5,8 @@ plugins {
 }
 
 apply plugin: 'org.jetbrains.kotlin.android.extensions'
+apply plugin: 'kotlin-android-extensions'
+
 androidExtensions {
     experimental = true
 }
